@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Plaerconteroll : MonoBehaviour
-
-{ private Rigidbody rb;
+public class Plaerconteroll : MonoBehaviour { 
+    public float speed = 8;
+    private Rigidbody rb;
     private float movementX;
-   private float movementY;
+    private float movementY;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +23,7 @@ public class Plaerconteroll : MonoBehaviour
         {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
-            rb.AddForce(movement);
+            rb.AddForce(movement * speed);
        }
   }
     
